@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LSFT,  SCLN,     Q,     J,     K,     X,                      B,     M,     W,     V,     Z,   ENT,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  RWIN, LOWER, LOWER,      RAISE, SPC, GRV \
+                                  RWIN, LOWER, LOWER,      RAISE, SPC,  GRV \
                               //`--------------------'  `--------------------'
   ),
 
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //|------+------+------+------+------+------|                |------+------+------+------+------+------|
      LSFT,   F11,   F12,   F13,   F14,   F15,                    END,   F17,   F18,   F19,   F20, XXXXX,\
 //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                GUIEI, LOWER, LOWER,    RAISE, SPC, ALTKN \
+                                 RWIN, LOWER, LOWER,    RAISE,   SPC,   ~ \
                             //`--------------------'  `--------------------'
 ),
 */
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //|------+------+------+------+------+------|                |------+------+------+------+------+------|
      LSFT,   F11,   F12,   F13,   F14,   F15,                    END,   F17,   F18,   F19,   F20, XXXXX,\
 //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                GUIEI, LOWER, LOWER,    RAISE, SPC, ALTKN \
+                                 RWIN, LOWER, LOWER,    RAISE,   SPC, GRV  \
                             //`--------------------'  `--------------------'
 ),
 
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
       Shift, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                   _   ,  +   ,   [  ,  ]   ,  \   ,  ~ 
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
+                                    WIN, LOWER, LOWER,    RAISE,   SPC,   ~ \
                               //`--------------------'  `--------------------'
   ),
 */
@@ -133,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LSFT, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                   UNDS,  PLUS,  LBRC,  RBRC,  BSLS,  TILD,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
+                                   RWIN, LOWER, LOWER,    RAISE,   SPC,  GRV \
                               //`--------------------'  `--------------------'
   ),
 
@@ -147,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LMOD,  LHUD,  LSAD,  LVAD, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
+                                    WIN, LOWER, LOWER,    RAISE,   SPC,  ~  \
                               //`--------------------'  `--------------------'
   )
 */
@@ -156,11 +156,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------.                ,-----------------------------------------.
         RST,  EXLM,    AT,  HASH,   DLR,  PERC,                   CIRC,  AMPR,  ASTR,  LPRN,  RPRN, XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LTOG,  LHUI,  LSAI,  LVAI, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+       LTOG,  F1  ,  F2  ,  F3  ,  F4  ,  F5  ,                   F6  ,  F7  ,  F8  ,  F9  ,  F10 ,  PIPE,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LMOD,  LHUD,  LSAD,  LVAD, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
+                                   RWIN, LOWER, LOWER,    RAISE,   SPC,  GRV \
                               //`--------------------'  `--------------------'
   )
 };
@@ -304,4 +304,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
-
