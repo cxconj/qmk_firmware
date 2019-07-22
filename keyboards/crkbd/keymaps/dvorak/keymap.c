@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LSFT,  SCLN,     Q,     J,     K,     X,                      B,     M,     W,     V,     Z,   ENT,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                  RWIN, LOWER, LOWER,      RAISE, SPC,  GRV \
+                                  RWIN, LOWER, ALTKN,      RAISE, SPC,  GRV \
                               //`--------------------'  `--------------------'
   ),
 
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //|------+------+------+------+------+------|                |------+------+------+------+------+------|
      LSFT,   F11,   F12,   F13,   F14,   F15,                    END,   F17,   F18,   F19,   F20, XXXXX,\
 //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                 RWIN, LOWER, LOWER,    RAISE,   SPC, GRV  \
+                                 RWIN, LOWER, ALTKN,    RAISE,   SPC, GRV  \
                             //`--------------------'  `--------------------'
 ),
 
@@ -133,7 +133,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LSFT, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                   UNDS,  PLUS,  LBRC,  RBRC,  BSLS,  TILD,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                   RWIN, LOWER, LOWER,    RAISE,   SPC,  GRV \
+                                   RWIN, LOWER, ALTKN,    RAISE,   SPC,  GRV \
                               //`--------------------'  `--------------------'
   ),
 
@@ -160,7 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
        LMOD,  LHUD,  LSAD,  LVAD, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
-                                   RWIN, LOWER, LOWER,    RAISE,   SPC,  GRV \
+                                   RWIN, LOWER, ALTKN,    RAISE,   SPC,  GRV \
                               //`--------------------'  `--------------------'
   )
 };
@@ -214,8 +214,8 @@ void matrix_render_user(struct CharacterMatrix *matrix) {
   if (is_master) {
     // If you want to change the display of OLED, you need to change here
     matrix_write_ln(matrix, read_layer_state());
-    matrix_write_ln(matrix, read_keylog());
-    matrix_write_ln(matrix, read_keylogs());
+    // matrix_write_ln(matrix, read_keylog());
+    // matrix_write_ln(matrix, read_keylogs());
     //matrix_write_ln(matrix, read_mode_icon(keymap_config.swap_lalt_lgui));
     //matrix_write_ln(matrix, read_host_led_state());
     //matrix_write_ln(matrix, read_timelog());
